@@ -1,0 +1,80 @@
+.sku-mapper-container {
+  @apply container mx-auto p-4 font-open-sans;
+}
+
+.sku-mapper-title {
+  @apply text-2xl font-bold text-darkGray font-roboto mb-4;
+}
+
+/* Style the dropzone area */
+.sku-mapper-dropzone {
+  @apply bg-white rounded shadow-md p-4 text-center cursor-pointer;
+}
+
+/* Apply hover style using a mixin */
+@mixin sku-mapper-hover-style {
+    @apply hover:bg-teal;
+}
+
+/* Style the file details display */
+.sku-mapper-uploaded-file-details {
+  @apply mt-2;
+}
+
+/* Style the mapping data panel */
+.sku-mapper-mappings {
+  @apply p-4;
+}
+
+/* Style the input for SKU mapping */
+.sku-mapper-map-sku-input {
+  @apply w-full p-2 border rounded text-darkGray font-open-sans focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Style the split SKUs list */
+.sku-mapper-split-skus-list {
+  @apply list-disc list-inside text-gray-500 font-open-sans;
+}
+
+/* Style the error message */
+.sku-mapper-error {
+  @apply text-red-500 font-open-sans text-center mt-2;
+}
+
+/* General text styling */
+.sku-mapper-text {
+  @apply text-gray-500 font-open-sans;
+}
+
+/* Validation error styling */
+.sku-mapper-validation-error {
+  @apply text-red-500 font-open-sans text-center mt-2;
+}
+
+.sku-mapper-subsection-title {
+    @apply text-xl font-semibold text-darkGray font-roboto mb-2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .sku-mapper-title {
+    @apply text-xl;
+  }
+}
+
+/*Disable transitions if prefers-reduced-motion is enabled*/
+@media (prefers-reduced-motion: reduce) {
+  .sku-mapper-dropzone,
+  .sku-mapper-map-sku-input,
+  .sku-mapper-mappings,
+  .sku-mapper-split-skus-list,
+  .sku-mapper-error {
+    @apply transition-none;
+  }
+}
+
+/* Apply focus styles */
+.sku-mapper-map-sku-input,
+.sku-mapper-dropzone input {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500;
+}

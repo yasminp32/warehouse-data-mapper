@@ -1,0 +1,57 @@
+.three-scene-container {
+  @apply relative w-full h-full overflow-hidden;
+}
+
+.three-scene-canvas {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+/* Full viewport coverage */
+.three-scene-full-viewport {
+  @apply absolute top-0 left-0 w-screen h-screen;
+}
+
+/* Base styles for canvas to ensure rendering */
+.three-scene-canvas {
+  @apply block; /* Ensure canvas is a block-level element */
+}
+
+/* Ensure compatibility with prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .three-scene-container {
+    /* Disable all transitions and animations */
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) { /* sm */
+  .three-scene-container {
+    /* Example adjustment for smaller screens */
+  }
+}
+
+@media (min-width: 768px) { /* md */
+  .three-scene-container {
+    /* Example adjustment for medium screens */
+  }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .three-scene-container {
+    /* Example adjustment for large screens */
+  }
+}
+
+@media (min-width: 1280px) { /* xl */
+  .three-scene-container {
+    /* Example adjustment for extra large screens */
+  }
+}
+
+@media (min-width: 1536px) { /* 2xl */
+  .three-scene-container {
+    /* Example adjustment for 2x extra large screens */
+  }
+}

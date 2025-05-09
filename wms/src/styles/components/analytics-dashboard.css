@@ -1,0 +1,70 @@
+.analytics-dashboard-container {
+  @apply container mx-auto p-4 font-open-sans;
+}
+
+.analytics-dashboard-title {
+  @apply text-3xl font-bold text-darkGray font-roboto text-center mb-8;
+}
+
+/* Style the card */
+.analytics-dashboard-card {
+  @apply bg-white rounded shadow-md overflow-hidden;
+}
+
+/* Style the loading state */
+.analytics-dashboard-loading {
+  @apply text-gray-500 font-open-sans text-center;
+}
+
+/* Style the error state */
+.analytics-dashboard-error {
+  @apply text-red-500 font-open-sans text-center;
+}
+
+/* Style the chart container to ensure it takes up space */
+.analytics-dashboard-chart-container {
+  @apply flex items-center justify-center;
+}
+
+/* Style the query input */
+.analytics-dashboard-query-input {
+  @apply w-full p-2 border rounded text-darkGray font-open-sans;
+}
+
+/* Style the generate insights button */
+.analytics-dashboard-generate-button {
+  @apply ml-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-700 transition-colors duration-300 font-roboto;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 640px) {
+  .analytics-dashboard-title {
+    @apply text-2xl; /* Reduce the title size on smaller screens */
+  }
+
+  .analytics-dashboard-chart-container {
+    @apply w-full; /* Make sure it is taking the full width */
+  }
+
+  .analytics-dashboard-query-input {
+    @apply text-sm; /* Reduce the text input */
+  }
+
+  .analytics-dashboard-generate-button {
+    @apply p-1 text-sm; /* Text area to adjust text size for smaller screens */
+  }
+}
+
+/* Ensure proper contrast for accessibility */
+.analytics-dashboard-title,
+.analytics-dashboard-query-input {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500; /* Add focus ring for accessibility */
+}
+
+.analytics-dashboard-generate-button:not(:disabled):hover {
+    @apply bg-teal;
+}
+
+.analytics-dashboard-generate-button:disabled {
+    @apply opacity-50 cursor-not-allowed;
+}

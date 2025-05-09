@@ -1,0 +1,31 @@
+.wms-page-container {
+  @apply container mx-auto p-4 font-open-sans;
+}
+
+.wms-page-section {
+  @apply mb-8;
+}
+
+.wms-page-title {
+  @apply text-3xl font-bold text-darkGray font-roboto text-center mb-8;
+}
+
+/* Style adjustments for individual components */
+.sku-mapper-section {
+  @apply mb-4;
+}
+
+.data-cleaner-section {
+  @apply mb-4;
+}
+
+.ai-dashboard-section {
+  @apply mb-4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .wms-page-title {
+    @apply text-2xl;
+  }
+}

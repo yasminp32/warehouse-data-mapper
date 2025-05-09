@@ -1,0 +1,43 @@
+.ai-query-input-container {
+  @apply flex items-center justify-between;
+}
+
+.ai-query-input-input {
+  @apply w-full p-2 border rounded text-darkGray font-open-sans focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.ai-query-input-button {
+  @apply ml-4 bg-blue-500 text-white p-2 rounded transition-colors duration-300 font-roboto;
+}
+
+.ai-query-input-button:hover {
+    @apply bg-teal;
+}
+
+.ai-query-input-button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.ai-query-input-error {
+  @apply text-red-500 font-open-sans text-center mt-2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .ai-query-input-input {
+    @apply text-sm;
+  }
+
+  .ai-query-input-button {
+    @apply p-1 text-sm;
+  }
+}
+
+/*Disable transitions if prefers-reduced-motion is enabled*/
+@media (prefers-reduced-motion: reduce) {
+    .ai-query-input-button{\n      @apply transition-none;\n    }\n}
+
+/* Accessibility focus style */
+.ai-query-input-input:focus {
+    @apply outline-none ring-2 ring-blue-500;
+}

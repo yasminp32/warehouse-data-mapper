@@ -1,0 +1,30 @@
+.slide-in {
+  /* Define CSS variables for transition properties */
+  --slide-in-direction: translateX(-100%);
+  --slide-in-duration: 300ms;
+  --slide-in-easing: ease-in-out;
+
+  /* Initial state: hidden and positioned off-screen */
+  @apply opacity-0 transform;
+  transform: var(--slide-in-direction);
+
+  /* Apply transition properties using CSS variables */
+  transition-property: transform, opacity;
+  transition-duration: var(--slide-in-duration);
+  transition-timing-function: var(--slide-in-easing);
+}
+
+.slide-in.slide-in-visible {
+  /* Final state: visible and in the viewport */
+  @apply opacity-100 transform-none;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .slide-in {
+    /* Disable transitions if the user prefers reduced motion */
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

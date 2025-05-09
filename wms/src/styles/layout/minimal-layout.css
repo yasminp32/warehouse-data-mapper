@@ -1,0 +1,27 @@
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-f0f2f5 {
+  background-color: #f0f2f5;
+}
+
+.font-open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Ensure compatibility with prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .flex-col,
+  .min-h-screen,
+  .bg-f0f2f5,
+  .font-open-sans {
+    transition: none !important;
+    animation: none !important;
+  }
+}

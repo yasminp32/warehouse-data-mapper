@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/favicon-j4mdw3zo.svg" type="image/svg+xml">
+  <title>3D WMS MVP</title>
+  <script type="module" crossorigin src="./assets/index-4h7j92w2.js"></script>
+  <link rel="stylesheet" href="./assets/index-n9ok3sje.css">
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

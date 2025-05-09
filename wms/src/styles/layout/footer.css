@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer-container {
+  @apply bg-darkGray text-white text-center py-3 font-roboto;
+}
+
+/* Ensure compatibility with prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .footer-container {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,39 @@
+.landing-hero-section {
+  @apply w-full h-[80vh] relative;
+}
+
+.landing-hero-content {
+  @apply absolute inset-0 z-10 flex flex-col items-center justify-center text-center;
+}
+
+.landing-hero-headline {
+  @apply text-4xl font-bold text-darkGray font-roboto;
+  @apply animation-fade-in-down;
+}
+
+.landing-hero-paragraph {
+  @apply text-lg text-gray-500 font-open-sans mt-4;
+  @apply animation-fade-in-down;
+}
+
+.landing-hero-canvas-container {
+  @apply w-full h-[80vh] absolute top-0 left-0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-hero-headline,
+  .landing-hero-paragraph {
+    @apply opacity-100 transform-none;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-hero-headline {
+    @apply text-3xl;
+  }
+
+  .landing-hero-paragraph {
+    @apply text-base;
+  }
+}

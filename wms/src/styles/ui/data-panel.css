@@ -1,0 +1,73 @@
+.data-panel-container {
+  @apply bg-white rounded shadow-md overflow-hidden font-open-sans p-4;
+  /* Basic DataPanel container styling */
+}
+
+.data-panel-title {
+  @apply text-xl font-semibold text-darkGray font-roboto mb-4;
+  /* Title styling */
+}
+
+.data-panel-grid {
+  @apply grid grid-cols-1 gap-2;
+  /* Grid layout for data items */
+}
+
+.data-panel-row {
+  @apply grid grid-cols-2 gap-2;
+  /* Two-column layout for key-value pairs */
+}
+
+.data-panel-key {
+  @apply text-gray-500 font-open-sans;
+  /* Styling for data keys */
+}
+
+.data-panel-value {
+  @apply text-darkGray font-open-sans;
+  /* Styling for data values */
+}
+
+.data-panel-no-data {
+  @apply text-gray-500 font-open-sans;
+  /* Style for "No data to display" message */
+}
+
+.data-panel-invalid-data {
+  @apply text-red-500 font-open-sans;
+  /* Style for "Invalid data format" message */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .data-panel-title {
+    @apply text-lg;
+  }
+
+  .data-panel-key {
+    @apply text-sm;
+  }
+
+  .data-panel-value {
+    @apply text-sm;
+  }
+}
+
+/* Accessibility focus style */
+.data-panel-container:focus-within {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-1;
+}
+
+/*Disable transitions if prefers-reduced-motion is enabled*/
+@media (prefers-reduced-motion: reduce) {
+    .data-panel-container,
+    .data-panel-title,
+    .data-panel-grid,
+    .data-panel-row,
+    .data-panel-key,
+    .data-panel-value,
+    .data-panel-no-data,
+    .data-panel-invalid-data {
+        @apply transition-none;
+    }
+}

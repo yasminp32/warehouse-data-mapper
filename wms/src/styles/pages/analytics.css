@@ -1,0 +1,18 @@
+.analytics-container {
+  @apply container mx-auto;
+}
+
+.analytics-section {
+  @apply w-full py-12;
+}
+
+.analytics-title {
+  @apply text-3xl font-bold text-darkGray font-roboto text-center mb-8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .analytics-title {
+    @apply text-2xl;
+  }
+}

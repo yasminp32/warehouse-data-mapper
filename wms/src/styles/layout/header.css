@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-fixed {
+  @apply fixed top-0 left-0 w-full z-50 bg-darkGray shadow-md font-open-sans;
+}
+
+.header-navigation {
+  @apply container mx-auto py-4 px-6 flex items-center justify-between text-white;
+}
+
+.header-logo-container {
+  @apply flex items-center;
+}
+
+.header-logo-text {
+  @apply ml-2 text-white font-bold text-lg;
+}
+
+.header-menu-toggle {
+  @apply block md:hidden;
+}
+
+.header-menu-button {
+  @apply flex items-center px-3 py-2 border rounded text-teal border-teal-lighter hover:text-white hover:border-white focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.header-menu-svg {
+  @apply fill-current h-3 w-3;
+}
+
+.header-menu {
+  @apply w-full block flex-grow md:flex md:items-center md:w-auto;
+}
+
+.header-nav-list {
+  @apply font-roboto md:flex md:justify-end flex-1 items-center;
+}
+
+.header-nav-item {
+  @apply md:ml-6 mt-2 md:mt-0;
+}
+
+.header-nav-link {
+  @apply block md:inline-block text-white hover:text-teal transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.header-nav-link-active {
+  @apply text-teal;
+}
+
+.header-nav-link:hover {
+    @apply text-teal
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-fixed,
+  .header-navigation,
+  .header-menu-button,
+  .header-nav-link {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+    .header-logo-text{
+        @apply text-base
+    }
+  .header-nav-item {
+    @apply md:ml-0 mt-2;
+  }
+}

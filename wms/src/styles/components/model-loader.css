@@ -1,0 +1,27 @@
+.model-loader-container {
+  @apply relative flex flex-col items-center justify-center;
+}
+
+.model-loader-progress-bar {
+  @apply absolute bottom-0 left-0 h-2 bg-teal transition-all duration-300;
+}
+
+.model-loader-progress-text {
+  @apply font-montserrat text-sm text-darkGray mt-1;
+}
+
+.model-loader-error {
+  @apply text-red-500 font-open-sans text-center;
+}
+
+@media (max-width: 640px) {
+  .model-loader-progress-text {
+    @apply text-xs;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .model-loader-progress-bar {
+    @apply transition-none;
+  }
+}

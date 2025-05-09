@@ -1,0 +1,42 @@
+.scroll-section {
+  @apply w-full relative overflow-hidden;
+}
+
+.scroll-driven-content {
+  @apply absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center;
+}
+
+/* Animation-specific styles */
+.scroll-driven-content > * {
+  @apply opacity-0 transform translate-y-10 transition-opacity transition-transform duration-700 ease-out;
+}
+
+/* Initial state for elements entering the viewport */
+.scroll-driven-content:not(.in-viewport) > * {
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly below */
+}
+
+/* Final state for elements within the viewport */
+.scroll-driven-content.in-viewport > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Disable animations if the user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-driven-content > * {
+    @apply opacity-100 transform-none transition-none;
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .scroll-driven-content h2 {
+    @apply text-3xl; /* Smaller heading for better fit */
+  }
+
+  .scroll-driven-content p {
+    @apply text-base; /* Smaller paragraph text */
+  }
+}

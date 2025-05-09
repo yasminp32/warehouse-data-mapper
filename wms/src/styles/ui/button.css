@@ -1,0 +1,45 @@
+.button-base {
+  @apply rounded transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 font-montserrat;
+  /* Accessibility: Ensure buttons are accessible */
+  @apply focus:ring-teal;
+  /* Reduced Motion: Disable transitions for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.button-primary {
+  @apply bg-blue-500 text-white font-roboto hover:bg-teal;
+}
+
+.button-primary:disabled {
+  @apply opacity-50 cursor-not-allowed bg-gray-500 text-gray-500 hover:bg-gray-500 hover:text-gray-500;
+}
+
+.button-secondary {
+  @apply bg-transparent text-darkGray font-open-sans border border-darkGray hover:bg-gray-100 focus:ring-gray-300;
+}
+
+.button-secondary:disabled {
+  @apply opacity-50 cursor-not-allowed bg-gray-500 text-gray-500 hover:bg-gray-500 hover:text-gray-500;
+}
+
+.button-text {
+  @apply bg-transparent text-blue-500 font-montserrat hover:text-teal;
+}
+
+.button-text:disabled {
+  @apply opacity-50 cursor-not-allowed bg-gray-500 text-gray-500 hover:bg-gray-500 hover:text-gray-500;
+}
+
+.button-small {
+  @apply p-2 text-sm;
+}
+
+.button-medium {
+  @apply p-4 text-base;
+}
+
+.button-large {
+  @apply p-6 text-lg;
+}

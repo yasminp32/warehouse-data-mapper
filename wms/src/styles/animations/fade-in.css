@@ -1,0 +1,24 @@
+.fade-in {
+  /* Initial state: fully transparent */
+  @apply opacity-0;
+  /* Apply transition properties */
+  @apply transition-opacity;
+  /* Make transition duration customizable using CSS variable, default to 300ms */
+  @apply duration-[var(--fade-in-duration,300ms)];
+  /* Make transition easing customizable using CSS variable, default to ease-in-out */
+  @apply ease-[var(--fade-in-easing,ease-in-out)];
+}
+
+.fade-in.visible {
+  /* Final state: fully opaque */
+  @apply opacity-100;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    /* If reduced motion is preferred, instantly set opacity to 1 */
+    @apply opacity-100 !important;
+    /*Remove transition*/
+    transition: none !important;
+  }
+}

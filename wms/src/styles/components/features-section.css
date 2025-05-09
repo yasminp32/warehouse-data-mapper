@@ -1,0 +1,33 @@
+.features-section {
+  @apply w-full py-12;
+}
+
+.features-section .container {
+  @apply mx-auto;
+}
+
+.features-section .container h2 {
+  @apply text-3xl font-bold text-darkGray font-roboto text-center mb-8;
+}
+
+.features-section .container .text-red-500 {
+  @apply text-red-500 font-open-sans text-center;
+}
+
+.features-section .container .grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+  .features-section .container h2 {
+    @apply text-2xl; /* Smaller heading for better fit on smaller screens */
+  }
+}
+
+/* Ensure no transitions if prefers-reduced-motion is enabled */
+@media (prefers-reduced-motion: reduce) {
+  .features-section .container > * {
+    @apply transition-none; /* Disable transitions */
+  }
+}

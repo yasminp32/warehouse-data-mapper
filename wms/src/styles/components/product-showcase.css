@@ -1,0 +1,77 @@
+.product-showcase-container {
+  @apply relative w-full h-full overflow-hidden font-open-sans;
+}
+
+.product-showcase-interactive-controls {
+  @apply flex flex-row justify-center items-center space-x-4 p-4 max-h-20;
+}
+
+.product-showcase-interactive-control {
+  @apply px-4 py-2 text-darkGray font-montserrat text-sm rounded hover:bg-gray-100 transition-colors duration-300;
+}
+
+.product-showcase-interactive-control:hover {
+  @apply text-teal;
+}
+
+.product-showcase-data-panel {
+  @apply bg-white rounded shadow-md overflow-hidden font-open-sans p-4;
+}
+
+.product-showcase-button {
+  @apply bg-blue-500 text-white font-roboto p-4 rounded transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Ensure compatibility with prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .product-showcase-container,
+  .product-showcase-interactive-control,
+  .product-showcase-button {
+    /* Disable all transitions and animations */
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) { /* sm */
+  .product-showcase-interactive-controls {
+    @apply flex-col space-x-0 space-y-2;
+  }
+
+  .product-showcase-interactive-control {
+    @apply text-xs;
+  }
+
+  .product-showcase-button {
+    @apply p-2 text-sm;
+  }
+}
+
+@media (min-width: 768px) { /* md */
+  .product-showcase-interactive-controls {
+    @apply space-x-6;
+  }
+
+  .product-showcase-interactive-control {
+    @apply text-base;
+  }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .product-showcase-container {
+    /* Example adjustment for large screens */
+  }
+}
+
+@media (min-width: 1280px) { /* xl */
+  .product-showcase-container {
+    /* Example adjustment for extra large screens */
+  }
+}
+
+@media (min-width: 1536px) { /* 2xl */
+  .product-showcase-container {
+    /* Example adjustment for 2x extra large screens */
+  }
+}

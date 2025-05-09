@@ -1,0 +1,22 @@
+.card-base {
+  @apply bg-white rounded shadow-md overflow-hidden font-open-sans p-4;
+  /* Basic card styling */
+}
+
+/* Ensure compatibility with prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .card-base {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Add a subtle hover effect */
+.card-base:hover {
+  @apply shadow-lg; /* Increase shadow on hover */
+}
+
+/* Add a focus ring for accessibility */
+.card-base:focus-within {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-1;
+}
